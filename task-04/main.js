@@ -24,13 +24,13 @@ console.log();
 console.log("--- 3. Grupare: Angajatii grupati dupa departament ---");
 const groupedEmployees = groupByDepartment(employees);
 Object.entries(groupedEmployees).forEach(([department, deptEmployees]) => {
-  console.log(`\n[Departament: ${department}] (${deptEmployees.length} angajați):`);
+  console.log(`\n[Departament: ${department}] (${deptEmployees.length} angajati):`);
   deptEmployees.forEach((emp) => console.log(formatEmployee(emp)));
 });
 console.log();
 
 const averageSalaryInitial = calculateAverageSalary(employees);
-console.log(`--- 4. Salariul mediu inițial al companiei: ${averageSalaryInitial.toFixed(2)} MDL ---\n`);
+console.log(`--- 4. Salariul mediu initial al companiei: ${averageSalaryInitial.toFixed(2)} MDL ---\n`);
 
 const experiencedEmployees = getExperiencedEmployees(employees, 3);
 console.log(`--- 5. Angajati cu experienta mai mare de 3 ani (${experiencedEmployees.length} angajati) ---`);
