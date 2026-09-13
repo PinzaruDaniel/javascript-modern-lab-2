@@ -42,3 +42,28 @@ export const removeProduct = (id) => {
   return getCart();
 };
 
+export const updateQuantity = (id, newQuantity) => {
+  if (typeof newQuantity !== "number" || newQuantity <= 0) {
+    throw new Error("Noua cantitate trebuie să fie un număr mai mare decât 0.");
+  }
+
+  const existingProduct = cart.find((item) => item.id === id);
+  if (!existingProduct) {
+    throw new Error(`Produsul cu ID-ul ${id} nu a fost găsit în coș.`);
+  }
+
+  cart = cart.map((item) =>
+    item.id === id ? { ...item, quantity: newQuantity } : item
+  );
+
+  return getCart();
+};
+
+export const calculateTotal = () => {
+  return cart.reduce((total, { price, quantity }) => total + price * quantity, 0);
+};
+
+export const formatCartItem = ({ id, name, price, quantity }) => {
+  const itemTotal = (price * quantity).toFixed(2);
+  return `[ID: ${id}] ${name} | Preț: ${price} MDL | Cantitate: ${quantity} | Total: ${itemTotal} MDL`;
+};
