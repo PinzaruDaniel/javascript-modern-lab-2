@@ -26,9 +26,9 @@ console.log();
 console.log("3. ADAUGAREA UNUI ELEV NOU");
 const newStudent = { id: 6, name: "Cristian", grade: 8.75 };
 addStudent(newStudent);
-console.log(`Elev nou adăugat cu succes:\n-> ${formatStudent(newStudent)}\n`);
+console.log(`Elev nou adaugat cu succes:\n-> ${formatStudent(newStudent)}\n`);
 
-console.log("--- Lista actualizată a elevilor ---");
+console.log("--- Lista actualizata a elevilor ---");
 getAllStudents().forEach((student) => {
   console.log(formatStudent(student));
 });
@@ -36,7 +36,7 @@ console.log();
 
 console.log("4. IDENTIFICAREA ELEVILOR CU NOTA >= 8");
 const topStudents = getStudentsWithGradeGte(8);
-console.log(`Număr de elevi cu nota >= 8: ${topStudents.length}`);
+console.log(`Numar de elevi cu nota >= 8: ${topStudents.length}`);
 topStudents.forEach((student) => {
   console.log(formatStudent(student));
 });
@@ -44,15 +44,15 @@ console.log();
 
 console.log("5. CALCULAREA MEDIEI CLASEI");
 const classAverage = calculateClassAverage();
-console.log(`Media notelor pentru întreaga clasă este: ${classAverage.toFixed(2)}\n`);
+console.log(`Media notelor pentru intreaga clasa este: ${classAverage.toFixed(2)}\n`);
 
-console.log("6. CĂUTAREA UNUI ELEV DUPĂ ID (tratare cu try / catch)");
+console.log("6. CAUTAREA UNUI ELEV DUPA ID (tratare cu try / catch)");
 
 const existingId = 3;
 try {
-  console.log(`[Căutare] Se caută elevul cu ID = ${existingId}...`);
+  console.log(`[Cautare] Se cauta elevul cu ID = ${existingId}...`);
   const foundStudent = findStudentById(existingId);
-  console.log(`[Succes] A fost găsit: ${formatStudent(foundStudent)}`);
+  console.log(`[Succes] A fost gasit: ${formatStudent(foundStudent)}`);
 } catch (error) {
   console.error(`[Eroare] ${error.message}`);
 }
@@ -61,9 +61,9 @@ console.log();
 
 const nonExistingId = 99;
 try {
-  console.log(`[Căutare] Se caută elevul cu ID = ${nonExistingId}...`);
+  console.log(`[Cautare] Se cauta elevul cu ID = ${nonExistingId}...`);
   const foundStudent = findStudentById(nonExistingId);
-  console.log(`[Succes] A fost găsit: ${formatStudent(foundStudent)}`);
+  console.log(`[Succes] A fost gasit: ${formatStudent(foundStudent)}`);
 } catch (error) {
-  console.error(`[Eroare prinsă în catch] ${error.message}`);
+  console.error(`[Eroare prinsa in catch] ${error.message}`);
 }
