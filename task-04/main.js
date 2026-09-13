@@ -38,10 +38,10 @@ experiencedEmployees.forEach((emp) => console.log(formatEmployee(emp)));
 console.log();
 
 const updatedEmployees = increaseSalaryForExperienced(employees, 3, 10);
-console.log("--- 6. Lista după majorarea salariului cu 10% pentru cei cu experiență > 3 ani ---");
+console.log("--- 6. Lista dupa majorarea salariului cu 10% pentru cei cu experienta > 3 ani ---");
 updatedEmployees.forEach((emp) => console.log(formatEmployee(emp)));
 console.log();
 
-console.log("--- 7. Generare și afișare Raport Final ---");
+console.log("--- 7. Generare și afisare Raport Final ---");
 const finalReport = generateFinalReport(employees, updatedEmployees);
 console.log(finalReport);
